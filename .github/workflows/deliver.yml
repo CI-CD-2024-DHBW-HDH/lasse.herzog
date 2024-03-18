@@ -1,10 +1,10 @@
-name: Continuous Delivery
+name: Deliver
 
 on: push
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}
+  IMAGE_NAME: todo-app
 
 jobs:
   build-and-push-image:

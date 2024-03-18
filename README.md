@@ -46,8 +46,11 @@ npm run dev
 4. Definiere alle nötigen Manifeste um das erstellte Image auf einem Kubernetes Cluster zu deployen **(5 Punkte)**
 5. Erkläre in eigenen Worten:
    * Welche Vorteile ein Kubernetes Deployment gegenüber einem Kubernetes Pod hat **(2 Punkte)**
+     * Ein Kubernetes Deployment enthält ein template für einen Pod. Im deployment kann dann z.B. spezifiziert werden wie viele Instanzen des Pods es geben soll. Es können auch noch weitere Angaben zur Skalierung in dem Deployment spezifiziert werden.
    * Wofür ein Kubernetes Service gut ist **(2 Punkte)**
+     * Ein Service ist dazu da mehreren Pods eine IP Adresse zuzuweisen. Bei Anfragen werden diese dann an die unterliegenden Pods weitergeleitet. Ein Service kann außerdem dazu genutzt werden um von außen auf das Kubernetes Cluster zuzugreifen.
    * Mehrere Wege wie man eine Kubernetes Anwendung von außen erreichen kann **(3 Punkte)**
+     * Eine Möglichkeit ist über einen Ingress. Dies bietet sich an wenn HTTP-Anfragen an den Pod geschickt werden. Zwei weitere Möglichkeiten sind Services vom Typ NodePort oder LoadBalancer. 
 
 ## Zusatzaufgabe:
 

@@ -1,0 +1,12 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: helloworld
+spec:
+  template:
+    spec:
+      containers:
+        - name: helloworld
+          image: alpine:latest
+          command: ["echo", "Hello World"]
+      restartPolicy: Never
